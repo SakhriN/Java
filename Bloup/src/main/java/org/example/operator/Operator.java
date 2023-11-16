@@ -180,11 +180,10 @@ public class Operator {
         while (nombre < 10 || nombre > 20) {
             if (nombre > 20) {
                 System.out.println("Plus petit, batard !");
-                nombre = scanner.nextInt();
             } else {
                 System.out.println("Plus grand, fdp !");
-                nombre = scanner.nextInt();
             }
+            nombre = scanner.nextInt();
         }
         System.out.println("Le nombre écrit est : " + nombre + ", bien joué.");
     }
@@ -322,7 +321,7 @@ public class Operator {
 
     public static void exo510() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Donnez beaucoup de notes :");
+        System.out.println("Donnez beaucoup de factures :");
         int nombre = 1;
         int sommeaPayer = 0;
         int i = 0;
@@ -332,7 +331,7 @@ public class Operator {
 
         while (nombre != 0) {
             int numnote = i + 1;
-            System.out.println("Paiement " + numnote + " : ");
+            System.out.println("Facture " + numnote + " : ");
             nombre = scanner.nextInt();
             sommeaPayer = sommeaPayer + nombre;
             i++;
