@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.operateur2.Operateur2;
 import org.example.variables.Variable;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -9,5 +10,6 @@ public class Main {
         // Press Alt+Entrée with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
         Variable.getVariable();
+        Operateur2.boucleFor();
         }
     }
