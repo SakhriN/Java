@@ -1,6 +1,9 @@
 package org.example;
 
+
+import org.example.array.ArrayMatrix;
 import org.example.operateur2.Operateur2;
+import org.example.string.ChaineCaracteres;
 import org.example.variables.Variable;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
@@ -11,5 +14,7 @@ public class Main {
         // IntelliJ IDEA suggests fixing it.
         Variable.getVariable();
         Operateur2.boucleFor();
+        ChaineCaracteres.getFormatString();
+        ArrayMatrix.getMatrix();
         }
     }

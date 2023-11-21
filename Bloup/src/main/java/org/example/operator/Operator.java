@@ -348,17 +348,17 @@ public class Operator {
             System.out.println("On vous doit :" + sommeaPayer + " euros.");
             if (sommeaPayer > 10) {
                 billet10 = sommeaPayer / 10;
-                sommeaPayer = sommeaPayer - billet10*10;
+                sommeaPayer = sommeaPayer - billet10 * 10;
             }
             if (sommeaPayer > 5) {
                 billet5 = sommeaPayer / 5;
-                sommeaPayer = sommeaPayer -billet5*5;
+                sommeaPayer = sommeaPayer - billet5 * 5;
             }
             if (sommeaPayer >= 1) {
                 piece1 = sommeaPayer;
                 sommeaPayer = sommeaPayer - sommeaPayer;
             }
-            System.out.println("On vous doit :" + billet10 + " billets de 10 euros, "+ billet5 + " billets de 5 euros et " + piece1 + " pieces de 1 euro.");
+            System.out.println("On vous doit :" + billet10 + " billets de 10 euros, " + billet5 + " billets de 5 euros et " + piece1 + " pieces de 1 euro.");
 
         } else if (sommeaPayer > 0) {
             System.out.println("Vous nous devez :" + sommeaPayer + " euros.");
@@ -380,5 +380,129 @@ public class Operator {
         }
         System.out.println(nombre + " est le premier nombre entier N tel que la somme de 1 a N dépasse 100, somme qui vaut : " + somme);
         scanner.close();
+    }
+
+    public static void exov51() {
+        int[] tab = {1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 1, 2};
+        int nbr = 2;
+        int count = 0;
+        for (int i = 0; i < (tab.length); i++) {
+            if (tab[i] == nbr) {
+                count++;
+            }
+        }
+        System.out.println("Valeur :" + nbr + ",\n Nombre d'occurrences : " + count);
+    }
+
+    public static void exov52() {
+        int[] tab = {1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 2, 1, 2};
+        boolean bool = false;
+        for (int i = 0, j = i + 1; i < (tab.length - 1); i++, j++) {
+            if ((tab[j] - tab[i]) >= 0) {
+                bool = true;
+            } else {
+                bool = false;
+                break;
+            }
+        }
+        if (bool == true) {
+            System.out.println("tableau trié par ordre croissant");
+        } else {
+            System.out.println("tableau pas trié par ordre croissant");
+        }
+    }
+
+    public static void exov53() {
+        int[] tab = {1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 2, 2, 2, 2, 2, 75, 1, 2};
+        boolean bool = false;
+        int ecart = 0;
+        int pos1 = 0;
+        int pos2 = 0;
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab.length; j++) {
+                if (i == j) {
+                    continue;
+                }
+                if ((tab[j] - tab[i]) > ecart) {
+                    ecart = tab[j] - tab[i];
+                    pos1 = i + 1;
+                    pos2 = j + 1;
+                }
+            }
+
+        }
+        System.out.println("Le plus grand écart est de :" + ecart + ",\n causé par l'écart entre la position numéro " + pos1 +
+                " et la position numéro " + pos2 + " .");
+    }
+
+    public static void exov55() {
+        int tab[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int newtab[] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for (int i = 0; i < tab.length; i++) {
+            newtab[i] = tab[tab.length - 1 - i];
+            System.out.println(newtab[i]);
+        }
+    }
+
+    public static void exov56() {
+        int tableau[] = {1, 12, 16, 13, 15, 12, 10, 8, 4, 9, 7, 5};
+        int n = tableau.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (tableau[j] < tableau[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            // Échanger l'élément minimum avec le premier élément non trié
+            int temp = tableau[minIndex];
+            tableau[minIndex] = tableau[i];
+            tableau[i] = temp;
+        }
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.println(tableau[i]);
+        }
+    }
+
+    public static void exov57() {
+        int tableau[] = {1, 12, 16, 13, 15, 12, 10, 8, 4, 9, 7, 5};
+        int i = 0;
+        boolean bool = true;
+        while (bool) {
+            bool = false;
+            for (i = 0; i < (tableau.length - 1); i++) {
+
+                if (tableau[i] > tableau[i + 1]) {
+                    int temp = tableau[i];
+                    tableau[i] = tableau[i + 1];
+                    tableau[i + 1] = temp;
+                    bool = true;
+                }
+            }
+        }
+
+        for (i = 0; i < tableau.length - 1; i++) {
+            System.out.println(tableau[i]);
+        }
+
+    }
+
+    public static void exov58() {
+        int tableau1[] = {11, 12, 16, 13, 15, 12, 10, 8, 4, 9, 7, 5};
+        int tableau2[] = {4, 0, 12, 0, 121, 1, 3, 7, 4, 9, 7, 5};
+
+        if (tableau1.length == tableau2.length) {
+            for (int i = 0; i <tableau1.length; i++) {
+                int[] somme = new int[tableau1.length];
+                somme[i] = tableau1[i] + tableau2[i];
+                System.out.println(somme[i]);
+            }
+        }else{
+            System.out.println("les tableaux ne sont pas de la meme dimension.");
+        }
+
+
     }
 }
