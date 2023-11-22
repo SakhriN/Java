@@ -4,6 +4,7 @@ import org.example.fonction.Fonction;
 import org.example.matrixu.Matrixu;
 import org.example.operator.Operator;
 import org.example.poo.Chaise;
+import org.example.poo.Person;
 import org.example.poo.Student;
 import org.example.poo.Teacher;
 import org.example.string.Stringblab;
@@ -29,9 +30,9 @@ public class Main {
 
 //        Exo2-1:
 //        Student Nassim = new Student();
-//        Nassim.DisplayAge(15);
-//        System.out.println("Hello");
 //        Nassim.GoToClass();
+//        Nassim.setAge(15);
+//        Nassim.DisplayAge();
 //        Teacher Mohamed = new Teacher();
 //        Mohamed.setAge(40);
 //        Mohamed.Explain();
