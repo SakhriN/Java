@@ -10,6 +10,6 @@ import org.example.string.Stringblab;
 public class Main {
     public static void main(String[] args) {
 
-        Fonction.getExo3();
+        Fonction.exofacto();
     }
 }
