@@ -32,9 +32,9 @@ public class DemoFunction {
         return result;
     }
 
-    public static List<Maison> sum(Maison[] val){
-        List<Maison> maisons = new ArrayList<>();
-        return maisons;
-    }
+//    public static List<Maison> sum(Maison[] val){
+//        List<Maison> maisons = new ArrayList<>();
+//        return maisons;
+//    }
 
 }
