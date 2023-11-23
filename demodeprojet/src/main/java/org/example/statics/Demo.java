@@ -7,7 +7,7 @@ public class Demo {
         User user1 = new User("Jean-Michel");
         System.out.println(user1);
 
-        int counter
+//        int counter
 
     }
 }
