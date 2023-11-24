@@ -12,15 +12,26 @@ public class Author {
 
     }
 
-    {
-        counter++;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public Author(String firstname, String lastname) {
-        this.idAuthor = counter;
+    public String getLastname() {
+        return lastname;
+    }
+
+    public Author(int idAuthor, String firstname, String lastname) {
+        this.idAuthor = idAuthor;
         this.firstname = firstname;
         this.lastname = lastname;
     }
 
-
+    @Override
+    public String toString() {
+        return "Author{" +
+                "idAuthor=" + idAuthor +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
+    }
 }

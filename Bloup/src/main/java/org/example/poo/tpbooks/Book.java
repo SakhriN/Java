@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Book {
     int idBook;
     int counter;
+
     String name;
 
     Author[] authors;
@@ -17,6 +18,20 @@ public class Book {
 
     float BigDecimal;
 
+    public static enum CoverType {
+
+        PAPERBACK,
+
+        HARDCOVER,
+
+        NOTHING,
+
+    }
+
+public CoverType coverType;
+    public CoverType getCoverType() {
+        return coverType;
+    }
     public Publisher getPublisher() {
         return publisher;
     }
@@ -24,6 +39,7 @@ public class Book {
     public int getPublishingAnnee() {
         return publishingAnnee;
     }
+
 
     public Author[] getAuthors() {
         return authors;
@@ -38,28 +54,29 @@ public class Book {
     }
 
 
-    public Book(String name, Author[] authors, Publisher publisher, int publishingAnnee, int amountOfPages, float bigDecimal) {
-        this.idBook = counter;
+    public Book(int idBook, String name, Author[] authors, Publisher publisher, int publishingAnnee, int amountOfPages, float bigDecimal, CoverType coverType) {
+        this.idBook = idBook;
         this.name = name;
         this.authors = authors;
         this.publisher = publisher;
         this.publishingAnnee = publishingAnnee;
         this.amountOfPages = amountOfPages;
-        BigDecimal = bigDecimal;
-    }
+        this.BigDecimal = bigDecimal;
+        this.coverType = coverType;
 
+    }
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "Book number " +
                 "idBook=" + idBook +
-                ", counter=" + counter +
                 ", name='" + name + '\'' +
                 ", authors=" + Arrays.toString(authors) +
                 ", publisher=" + publisher +
                 ", publishingAnnee=" + publishingAnnee +
                 ", amountOfPages=" + amountOfPages +
                 ", BigDecimal=" + BigDecimal +
-                '}';
+                ", coverType=" + coverType +
+                "   \n";
     }
 }
