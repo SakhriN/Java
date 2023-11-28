@@ -12,6 +12,10 @@ public class Author {
 
     }
 
+
+    {
+        counter++;
+    }
     public String getFirstname() {
         return firstname;
     }
@@ -20,8 +24,8 @@ public class Author {
         return lastname;
     }
 
-    public Author(int idAuthor, String firstname, String lastname) {
-        this.idAuthor = idAuthor;
+    public Author(String firstname, String lastname) {
+        this.idAuthor = counter;
         this.firstname = firstname;
         this.lastname = lastname;
     }

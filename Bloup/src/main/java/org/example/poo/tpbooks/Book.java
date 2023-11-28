@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Book {
     int idBook;
-    int counter;
+    static  int counter;
 
     String name;
 
@@ -54,8 +54,8 @@ public CoverType coverType;
     }
 
 
-    public Book(int idBook, String name, Author[] authors, Publisher publisher, int publishingAnnee, int amountOfPages, float bigDecimal, CoverType coverType) {
-        this.idBook = idBook;
+    public Book(String name, Author[] authors, Publisher publisher, int publishingAnnee, int amountOfPages, float bigDecimal, CoverType coverType) {
+        this.idBook = counter;
         this.name = name;
         this.authors = authors;
         this.publisher = publisher;
