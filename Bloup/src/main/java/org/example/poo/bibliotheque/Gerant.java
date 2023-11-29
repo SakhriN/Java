@@ -9,12 +9,9 @@ public class Gerant {
 
         LivrePapier Livre = new LivrePapier("Dormir en 75 étapes","Stephen Hawking",69,"Maison de fou");
         LivreNumerique bloc = new LivreNumerique("Le poker pour les nuls","Nassim Sakhri","7zip",1000000000);
+        Bibliotheque test = new Bibliotheque();
 
-        Emprunt emprunt2 = new Emprunt(personne2, Livre);
-        Emprunt emprunt1 = new Emprunt(personne1,bloc);
-
-
-        System.out.println(emprunt1);
-        System.out.println(emprunt2);
+        test.ajouterLivre(Livre);
+        System.out.println(test.trouverLivresParTitre("Dormir"));
     }
 }

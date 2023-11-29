@@ -6,6 +6,7 @@ public class LivrePapier extends Livre {
 
     public  LivrePapier(){
     }
+
     public LivrePapier(String title, String author, int nbPages, String editMaison) {
         super(title, author);
         this.nbPages = nbPages;
