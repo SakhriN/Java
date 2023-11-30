@@ -18,9 +18,9 @@ public class Facture {
 
     }
 
-    public Facture getprixTotal(float id, int quantite) {
-
-    }
+//    public Facture getprixTotal(float id, int quantite) {
+//
+//    }
 
 
     {
